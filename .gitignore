@@ -1,2 +1,6 @@
-*.pdb
-FarmApp/bin/FarmApp.dll
+FarmApp/bin/*.*
+FarmApp/obj/Debug/*.*
+FarmApp/obj/Release/*.*
+FarmApp/obj/*.*
+*.user
+*.suo

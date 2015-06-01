@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -16,6 +18,8 @@ namespace FarmApp.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public string Phone { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
