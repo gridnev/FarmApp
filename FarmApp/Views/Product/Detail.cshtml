@@ -1,0 +1,33 @@
+﻿@model FarmApp.ViewModels.ProductViewModel
+
+@{
+    ViewBag.Title = "Карточка товара";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Карточка товара</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Назад к моим товарам", "Index")
+</p>

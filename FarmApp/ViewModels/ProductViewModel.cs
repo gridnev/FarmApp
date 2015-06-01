@@ -1,10 +1,14 @@
 ﻿using System.ComponentModel;
+using System.Web.Mvc;
 using FarmApp.Models;
 
 namespace FarmApp.ViewModels
 {
     public class ProductViewModel
     {
+        [HiddenInput]
+        public long Id { get; set; }
+
         [DisplayName("Наименование")]
         public string Title { get; set; }
 

@@ -1,14 +1,14 @@
 ﻿@model FarmApp.ViewModels.ProductViewModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Новый товар</h2>
+<h2>Редактировать товар</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
@@ -26,20 +26,23 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Description,  new { @class = "form-control" })
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
 
+        @Html.HiddenFor(model => model.Id)
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Создать" class="btn btn-default" />
+                <input type="submit" value="Сохранить" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div><span class="glyphicon glyphicon-menu-left" style="color: #428bca;"></span>
+<div>
+    <span class="glyphicon glyphicon-menu-left" style="color: #428bca;"></span>
     @Html.ActionLink("Назад к моим товарам", "Index")
 </div>
 

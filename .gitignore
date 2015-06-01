@@ -4,3 +4,7 @@ FarmApp/obj/Release/*.*
 FarmApp/obj/*.*
 *.user
 *.suo
+FarmApp.v12.suo
+*.user
+FarmApp/FarmApp.csproj.user
+FarmApp.v12.suo
